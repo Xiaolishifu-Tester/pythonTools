@@ -1,0 +1,24 @@
+# Support excute command on PowerShell
+        *ISPOWERSHELL = True or False
+            **True: used PowerShell
+            **False:  used conmand line
+
+# Support save test result to excel
+        *SAVE_RESULT_TOEXCEL = True  or False
+            ** write result to excel
+            ** write skip
+
+# command line can be not startwith "python"
+    *harness_main.py --test_config MEM-STRESSAPPTEST.JSON --test GenericWorkload wl_test_name=MEM-STRESSAPPTEST-002 extra_json_params="[_main_test,stage_run_stressapptest,--test=MEM-STRESSAPPTEST-002]" bios_knobs_cfg=SNC_disabled --subsystem=MSS
+    *python harness_main.py --test_config MEM-STRESSAPPTEST.JSON --test GenericWorkload wl_test_name=MEM-STRESSAPPTEST-002 extra_json_params="[_main_test,stage_run_stressapptest,--test=MEM-STRESSAPPTEST-002]" bios_knobs_cfg=SNC2 --subsystem=MSS
+        **if not startwith "python", the scripts will auto add "python"
+
+# add iauto.py log folder,
+    *SCRIPTSTYPE = 4  # 1 --> cxsh bifrost   2 --> dtaf_connect  3 -->bifrost  4 --> icx iauto
+
+# modify log file name
+    *used hostname to define
+
+# modify log folder tree
+    *before? .\YYYY-MM-DD-HH-mm-SS
+    *after:   .\YYY-MM-DD\YYYY-MM-DD-HH-mm-SS

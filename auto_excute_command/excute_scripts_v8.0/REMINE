@@ -1,0 +1,6 @@
+1. Parameters can be entered arbitrarily and are not case-sensitive
+    -h/p/e/host/priority/excute   -all/h***/All/H***  --wW**/Pp
+2. The log folder has been modified
+    YYYY-MM-DD-HH-mm-SS
+3. add datf automation logs folder
+    C:\automation\dtaf_logs
